@@ -50,7 +50,7 @@
                     <artifactId>javafx-maven-plugin</artifactId>
                     <version>0.0.3</version>
                     <configuration>
-                        <mainClass>ru.kpfu.itis.App</mainClass>
+                        <mainClass>ru.kpfu.itis.app.App</mainClass>
                     </configuration>
                 </plugin>
                 <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
