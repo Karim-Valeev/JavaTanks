@@ -1,4 +1,4 @@
 package ru.kpfu.itis.entities;
 
-public class Stone {
+public class Stone extends MapElement{
 }
