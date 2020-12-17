@@ -1,9 +1,9 @@
 package ru.kpfu.itis.entities;
 
-public class Bullet {
+public class Bullet extends MapElement{
 
     int speed;
-    int angle;
+//    int angle;
     int damage;
 
 

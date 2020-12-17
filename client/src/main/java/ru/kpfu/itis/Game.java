@@ -1,4 +1,4 @@
-package ru.kpfu.itis.app;
+package ru.kpfu.itis;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,33 +18,37 @@ import javafx.stage.Stage;
 import java.io.InputStream;
 import java.net.URL;
 
-public class App extends Application {
+public class Game extends Application {
     public static void main(String[] args) {
         launch();
     }
 
     @Override
     public void start(Stage window) throws Exception {
-        window.setTitle("Hello world Application");
-        window.setWidth(300);
-        window.setHeight(200);
+        window.setTitle("Canvas Test");
+        window.setMinWidth(700);
+        window.setMinHeight(700);
+        window.setResizable(true);
+
+        Group root = new Group();
+        Scene gamingScene = new Scene(root);
+        window.setScene(gamingScene);
 
 //        InputStream iconStream = getClass().getResourceAsStream("/icon.png");
 //        Image image = new Image(iconStream);
 //        window.getIcons().add(image);
 
-        Label helloWorldLabel = new Label("Hello world!");
-        helloWorldLabel.setAlignment(Pos.CENTER);
-        Scene primaryScene = new Scene(helloWorldLabel);
-        window.setScene(primaryScene);
+//        Label helloWorldLabel = new Label("Hello world!");
+//        helloWorldLabel.setAlignment(Pos.CENTER);
+//        Scene primaryScene = new Scene(helloWorldLabel);
+//        window.setScene(primaryScene);
 
-//        FXMLLoader loader = new FXMLLoader();
-//        URL xmlUrl = getClass().getResource("/home/walai_kami/Desktop/JavaTanks/client/src/main/resources/fxml/main.fxml");
-//        loader.setLocation(xmlUrl);
-//        Parent root = loader.load();
+        FXMLLoader loader = new FXMLLoader();
+        URL xmlUrl = getClass().getResource("/fxml/main.fxml");
+        loader.setLocation(xmlUrl);
+        Parent root = loader.load();
 
-//        window.setScene(new Scene(root));
-        window.show();
+        window.setScene(new Scene(root));
 
         window.show();
     }
