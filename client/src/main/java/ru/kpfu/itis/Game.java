@@ -14,6 +14,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -62,10 +63,17 @@ public class Game extends Application {
     private void newScene(ActionEvent event) throws IOException {
         event.consume();
         FXMLLoader loader = new FXMLLoader();
-        String fxmlDocPath = "/Users/musa/JavaTanks/client/src/main/resources/fxml/infoPage.fxml";
+        String fxmlDocPath = "/Users/musa/JavaTanks/client/src/main/resources/fxml/registration.fxml";
         FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
-        HBox hBox = (HBox) loader.load(fxmlStream);
-        Scene scene2 = new Scene(hBox,500,500);
+        VBox vBox = (VBox) loader.load(fxmlStream);
+        Scene scene2 = new Scene(vBox,500,500);
         Game.window.setScene(scene2);
     }
+
+    @FXML
+    private void operator(ActionEvent event){
+        event.consume();
+    }
+
+
 }

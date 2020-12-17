@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="10" alignment="center" fx:controller="ru.kpfu.itis.Game"
+      GridPane.columnIndex="1" GridPane.rowIndex="4" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+    <TextField
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Button text="Sign In" onAction="#operator"/>
+    <Text text="Welcome"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+</VBox>
