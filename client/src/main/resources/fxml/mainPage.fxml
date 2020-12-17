@@ -4,7 +4,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox fx:id="vbox" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="300.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.kpfu.itis.Game">
+<HBox fx:id="vbox"
+      layoutX="10.0"
+      layoutY="10.0"
+      prefHeight="250.0"
+      prefWidth="300.0"
+      spacing="10"
+
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/2.2"
+      fx:controller="ru.kpfu.itis.Game">
     <style>
         -fx-padding: 10;
         -fx-border-style: solid inside;
@@ -16,5 +25,6 @@
     <children>
         <Button fx:id="quitButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="quit" textAlignment="CENTER" onAction="#exit" />
         <Button fx:id="infoButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="guide" textAlignment="CENTER" onAction="#newScene" />
+        <Button fx:id="gameCanvas" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="GAME_CANVAS" textAlignment="CENTER" onAction="#gameCanvas" />
     </children>
 </HBox>
