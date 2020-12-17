@@ -8,12 +8,12 @@
 
 <?import javafx.scene.text.Text?>
 
-<VBox spacing="10" alignment="center" fx:controller="ru.kpfu.itis.Game"
-      GridPane.columnIndex="1" GridPane.rowIndex="4" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
-    <TextField
-            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    <Button text="Sign In" onAction="#operator"/>
-    <Text text="Welcome"
-          GridPane.columnIndex="0" GridPane.rowIndex="0"
-          GridPane.columnSpan="2"/>
+
+<VBox spacing="15" alignment="CENTER" fx:controller="ru.kpfu.itis.Game"
+       xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/2.2" stylesheets="/style.css">
+    <Text fx:id="header" text="Please, enter your nickname"/>
+    <TextField  styleClass="input-line"  />
+    <Button fx:id="regButton" text="Sign In" onAction="#operator"/>
+
 </VBox>

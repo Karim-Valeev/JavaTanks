@@ -4,17 +4,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox fx:id="vbox" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="300.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.kpfu.itis.Game">
-    <style>
-        -fx-padding: 10;
-        -fx-border-style: solid inside;
-        -fx-border-width: 2;
-        -fx-border-insets: 5;
-        -fx-border-radius: 5;
-        -fx-border-color: blue;
-    </style>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<VBox fx:id="mainBox" alignment="CENTER" spacing="15" fx:controller="ru.kpfu.itis.Game" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/2.2" stylesheets="/style.css">
     <children>
-        <Button fx:id="quitButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="quit" textAlignment="CENTER" onAction="#exit" />
-        <Button fx:id="infoButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="guide" textAlignment="CENTER" onAction="#newScene" />
+        <Text fx:id="header">Welcome to JavaTanks</Text>
+        <Button fx:id="quitButton"  contentDisplay="CENTER" text="quit" textAlignment="CENTER" onAction="#exit" />
+        <Button fx:id="regButton1" contentDisplay="CENTER" text="registration" textAlignment="CENTER" onAction="#regScene" />
+        <Button fx:id= "infoButton"  contentDisplay="CENTER" text="guide" textAlignment="CENTER" onAction="#regScene"/>
     </children>
-</HBox>
+
+</VBox>

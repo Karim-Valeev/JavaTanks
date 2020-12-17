@@ -19,6 +19,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import ru.kpfu.itis.screens.NewScreen;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -35,12 +36,14 @@ public class Game extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         window = stage;
-        FXMLLoader loader = new FXMLLoader();
-        String fxmlDocPath = "/Users/musa/JavaTanks/client/src/main/resources/fxml/mainPage.fxml";
-        FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
-        HBox root = (HBox) loader.load(fxmlStream);
-        scene = new Scene(root);
-        window.setScene(scene);
+        NewScreen main = new NewScreen("/fxml/mainPage.fxml", window);
+        main.newScene();
+//        FXMLLoader loader = new FXMLLoader();
+//        String fxmlDocPath = "/Users/musa/JavaTanks/client/src/main/resources/fxml/mainPage.fxml";
+//        FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
+//        HBox root = (HBox) loader.load(fxmlStream);
+//        scene = new Scene(root);
+//        window.setScene(scene);
         window.setTitle("A simple FXML Example");
         window.show();
 
@@ -53,20 +56,19 @@ public class Game extends Application {
         Platform.exit();
     }
     @FXML
-    private void newScene(ActionEvent event) throws IOException {
+    private void regScene(ActionEvent event) throws IOException {
         event.consume();
-        FXMLLoader loader = new FXMLLoader();
-        String fxmlDocPath = "/Users/musa/JavaTanks/client/src/main/resources/fxml/registration.fxml";
-        FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
-        VBox vBox = (VBox) loader.load(fxmlStream);
-        Scene scene2 = new Scene(vBox,500,500);
-        Game.window.setScene(scene2);
+        NewScreen screen = new NewScreen("/fxml/registration.fxml", Game.window);
+        screen.newScene();
     }
+
 
     @FXML
     private void operator(ActionEvent event){
         event.consume();
+
     }
+
 
 
 }
