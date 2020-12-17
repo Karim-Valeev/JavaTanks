@@ -43,10 +43,10 @@ public class Game extends Application {
 //        Scene primaryScene = new Scene(helloWorldLabel);
 //        window.setScene(primaryScene);
 
-//        FXMLLoader loader = new FXMLLoader();
-//        URL xmlUrl = getClass().getResource("/fxml/main.fxml");
-//        loader.setLocation(xmlUrl);
-//        Parent root = loader.load();
+        FXMLLoader loader = new FXMLLoader();
+        URL xmlUrl = getClass().getResource("/fxml/main.fxml");
+        loader.setLocation(xmlUrl);
+        Parent roottt = loader.load();
 //
 //        window.setScene(new Scene(root));
 
