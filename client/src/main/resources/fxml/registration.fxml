@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<?import javafx.scene.text.Text?>
-
-<!--<<<<<<< HEAD-->
-<!--<VBox spacing="10" alignment="center"-->
-<!--      GridPane.columnIndex="1"-->
-<!--      GridPane.rowIndex="4"-->
-
-<!--      xmlns:fx="http://javafx.com/fxml/1"-->
-<!--      xmlns="http://javafx.com/javafx/2.2"-->
-<!--      fx:controller="ru.kpfu.itis.Game">-->
-<!--    <TextField-->
-<!--            GridPane.columnIndex="1" GridPane.rowIndex="1"/>-->
-<!--    <Button text="Sign In" onAction="#operator"/>-->
-<!--    <Text text="Welcome"-->
-<!--          GridPane.columnIndex="0" GridPane.rowIndex="0"-->
-<!--          GridPane.columnSpan="2"/>-->
-<!--</VBox>-->
-
-<VBox spacing="15" alignment="CENTER" fx:controller="ru.kpfu.itis.Game"
-       xmlns:fx="http://javafx.com/fxml/1"
-      xmlns="http://javafx.com/javafx/2.2" stylesheets="/style.css">
-    <Text fx:id="header" text="Please, enter your nickname"/>
-    <TextField  styleClass="input-line"  />
-    <Button fx:id="regButton" text="Sign In" onAction="#operator"/>
-
-</VBox>
+<?import javafx.scene.text.*?>
+<GridPane fx:controller="ru.kpfu.itis.Game"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" stylesheets="/style.css">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+    <Text styleClass="regText" text="Enter username" GridPane.halignment="CENTER" textAlignment="CENTER"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+    <TextField
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <HBox spacing="10" alignment="center"
+          GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button text="Sign In"/>
+    </HBox>
+</GridPane>

@@ -4,7 +4,7 @@
     -fx-min-width: 70;
 }
 
-#regText{
+.regText{
     -fx-font-family: Helvetica;
     -fx-font-size: 40px;
     -fx-text-fill:#c28090;
@@ -23,7 +23,7 @@
 
 .button{
     -fx-background-color: #8090c2 ;
-    -fx-min-height: 120;
+    -fx-min-height: 40;
     -fx-min-width: 150;
     -fx-spacing: 150 ;
     -fx-cursor: hand;
@@ -56,12 +56,20 @@ VBox{
     -fx-background-color:#c2b280;
 }
 
+GridPane{
+    -fx-background-color:#c2b280;
+}
+
 #header{
     -fx-font-size: 30px;
 }
 
 .input-line {
-    -fx-pref-height:20;
-    -fx-pref-width: 20;
+    -fx-pref-height:35;
+    -fx-pref-width: 1;
+    -fx-border-width: 10;
     -fx-text-alignment: center;
+    -fx-alignment: center;
 }
+
+
