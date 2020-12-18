@@ -36,6 +36,7 @@ import java.util.Iterator;
 public class Game extends Application {
     private static Stage window;
     Scene scene, scene1;
+
     public static void main(String[] args) {
         launch();
     }
@@ -44,8 +45,8 @@ public class Game extends Application {
     public void start(Stage stage) throws Exception {
         window = stage;
 //<<<<<<< HEAD
-//        window.setMinWidth(700);
-//        window.setMinHeight(700);
+        window.setMinWidth(700);
+        window.setMinHeight(700);
 //        FXMLLoader loader = new FXMLLoader();
 //        URL xmlUrl = getClass().getResource("/fxml/mainPage.fxml");
 //        loader.setLocation(xmlUrl);
@@ -201,7 +202,7 @@ public class Game extends Application {
             }
         }.start();
         window.setScene(theScene);
-        window.show();
+//        window.show();
 
     }
 

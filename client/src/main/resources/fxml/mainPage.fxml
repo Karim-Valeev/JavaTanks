@@ -37,6 +37,7 @@
         <Button fx:id="quitButton"  contentDisplay="CENTER" text="quit" textAlignment="CENTER" onAction="#exit" />
         <Button fx:id="regButton1" contentDisplay="CENTER" text="registration" textAlignment="CENTER" onAction="#regScene" />
         <Button fx:id= "infoButton"  contentDisplay="CENTER" text="guide" textAlignment="CENTER" onAction="#regScene"/>
+        <Button fx:id="gameCanvas" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="GAME_CANVAS" textAlignment="CENTER" onAction="#gameCanvas" />
     </children>
 
 </VBox>
