@@ -24,6 +24,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import ru.kpfu.itis.entities.Sprite;
+import ru.kpfu.itis.screens.NewScreen;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -42,15 +43,19 @@ public class Game extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         window = stage;
-        window.setMinWidth(700);
-        window.setMinHeight(700);
-        FXMLLoader loader = new FXMLLoader();
-        URL xmlUrl = getClass().getResource("/fxml/mainPage.fxml");
-        loader.setLocation(xmlUrl);
-        HBox root = loader.load();
-////
-        scene = new Scene(root);
-        window.setScene(scene);
+//<<<<<<< HEAD
+//        window.setMinWidth(700);
+//        window.setMinHeight(700);
+//        FXMLLoader loader = new FXMLLoader();
+//        URL xmlUrl = getClass().getResource("/fxml/mainPage.fxml");
+//        loader.setLocation(xmlUrl);
+//        HBox root = loader.load();
+//////
+//        scene = new Scene(root);
+//        window.setScene(scene);
+//=======
+        NewScreen main = new NewScreen("/fxml/mainPage.fxml", window);
+        main.newScene();
         window.setTitle("A simple FXML Example");
         window.show();
     }
@@ -61,22 +66,19 @@ public class Game extends Application {
         Platform.exit();
     }
     @FXML
-    private void newScene(ActionEvent event) throws IOException {
+    private void regScene(ActionEvent event) throws IOException {
         event.consume();
-        FXMLLoader loader = new FXMLLoader();
-        URL xmlUrl = getClass().getResource("/fxml/registration.fxml");
-        loader.setLocation(xmlUrl);
-        VBox vBox = (VBox) loader.load();
-        Scene scene2 = new Scene(vBox,500,500);
-        System.out.println(scene2);
-        System.out.println(window);
-        window.setScene(scene2);
-        window.show();
+
+        NewScreen screen = new NewScreen("/fxml/registration.fxml", Game.window);
+        screen.newScene();
+
     }
+
 
     @FXML
     private void gameCanvas(ActionEvent event) throws IOException {
         event.consume();
+
         window.setTitle( "GAME" );
 
 
@@ -200,11 +202,13 @@ public class Game extends Application {
         }.start();
         window.setScene(theScene);
         window.show();
+
     }
 
     @FXML
     private void operator(ActionEvent event){
         event.consume();
     }
+
 
 }

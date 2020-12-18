@@ -1,0 +1,67 @@
+#regButton{
+    -fx-background-color: #8090c2 ;
+    -fx-min-height: 50;
+    -fx-min-width: 70;
+}
+
+#regText{
+    -fx-font-family: Helvetica;
+    -fx-font-size: 40px;
+    -fx-text-fill:#c28090;
+}
+#regFrom{
+    -fx-min-width: 10;
+    -fx-min-height: 50;
+    -fx-pref-width: 30px;
+    -fx-font-style: cursive;
+
+}
+
+#quitButton{
+    -fx-start-margin: 0 10 10 10 ;
+}
+
+.button{
+    -fx-background-color: #8090c2 ;
+    -fx-min-height: 120;
+    -fx-min-width: 150;
+    -fx-spacing: 150 ;
+    -fx-cursor: hand;
+    -fx-font-size: 25px;
+
+}
+
+HBox{
+    -fx-spacing: 150;
+    -fx-font-family: Helvetica;
+}
+
+#imageView{
+    -fx-alignment: center;
+}
+
+ImageView{
+    -fx-alignment: center;
+}
+#imageView{
+    -fx-padding: 20px;
+    -fx-border-insets: 20px;
+    -fx-background-insets: 20px;
+}
+
+#mainBox{
+    -fx-background-color:#c2b280;
+}
+VBox{
+    -fx-background-color:#c2b280;
+}
+
+#header{
+    -fx-font-size: 30px;
+}
+
+.input-line {
+    -fx-pref-height:20;
+    -fx-pref-width: 20;
+    -fx-text-alignment: center;
+}
